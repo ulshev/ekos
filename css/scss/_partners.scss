@@ -1,0 +1,68 @@
+/* start services styles */ 
+
+#partners {
+    //background: #fff;
+    .page_width {
+        padding-top: 1px;
+        padding-bottom: 100px;
+    }
+}
+
+.partners_slider {
+
+    .slick-list {
+        margin: 0 -15px;
+    }
+
+    .logo_item {
+        height: 150px;
+        margin: 0 15px 10px;
+        line-height: 150px;
+        text-align: center;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        @include transition(all);
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        &:hover, &.slick-current {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+        }
+    }
+}
+
+
+// @media screen and (min-width: 1031px) {
+    
+// }
+
+// @media screen and (max-width: 1600px) {
+    
+// }
+
+// @media screen and (max-width: 1300px) {
+    
+// }
+// @media screen and (max-width: 1030px) {
+    
+// }
+// @media screen and (max-width: 800px) {
+    
+// }
+
+// @media screen and (max-width: 600px) {
+    
+// }
+
+// @media screen and (max-width: 450px) {
+    
+// }
+
+/* end partners styles */

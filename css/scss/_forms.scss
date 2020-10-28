@@ -1,0 +1,459 @@
+/* start forms styles */ 
+
+#main_form {
+	z-index: 1;
+	overflow: visible;
+	padding-top: 90px;
+	padding-bottom: 100px;
+	max-width: 100%;
+	background: #4a6d6f url(images/bg_main_form.jpg) no-repeat center / cover;
+
+	&::before {
+		content: "EKOS";
+		position: absolute;
+		max-width: $max-width;
+		left: auto;
+		right: auto;
+		margin: 80px auto;
+		padding-top: 80px;
+		text-transform: uppercase;
+		transform: rotate(-90deg);
+		opacity: 0.12;
+		color: #fff;
+		font-weight: 800;
+		//font-size: 150px;
+		font-size: 8vw;
+		line-height: 150px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 163/1920*100%;
+		bottom: -25px;
+		width: 25.0520833333%;
+		max-width: 481px;
+		height: 250px;
+		z-index: 0;
+		background: url(images/spikelets2.png) no-repeat left bottom/100% auto;
+	}
+
+    .page_width {
+		padding-top: 57px;
+		padding-bottom: 60px;
+		padding: 57px 180px 60px;
+		text-align: center;
+		max-width: 1010px;
+		width: 90%;
+		box-sizing: border-box;
+		background: radial-gradient(54.34% 54.34% at 50% 50%, rgba(255, 255, 255, 0.296) 47.4%, rgba(168, 255, 250, 0.136) 100%);
+		backdrop-filter: blur(20px);
+		z-index: 1;
+		border-radius: 10px;
+	
+		&::after {
+			content: "";
+			position: absolute;
+			left: 95%;
+			bottom: -20px;
+			width: 257/1010*100%;
+			max-width: 257px;
+			height: 300px;
+			background: url(images/microscope2.png) no-repeat left bottom/100% auto;
+		}
+    }
+    
+    
+    h2 {
+		margin-bottom: 5px;
+	}
+	h2 + p {
+		margin-bottom: 28px;
+	}
+}
+
+.form_block {
+	.gUniFormStatic {
+		max-width: 1000px;
+		margin: 0 auto 10px;
+	}
+
+    .input_text {
+		width: calc(50% - 20px);
+		float: left;
+		margin: 0 10px 20px;
+		position: relative;
+	}
+	.textarea {
+		clear: both;
+		margin-left: 10px;
+		margin-right: 10px;
+		position: relative;
+	}
+	
+    input[type="text"], textarea {
+		padding: 10px 30px 10px 30px;
+		height: 50px;
+		width: 100%;
+		max-width: 100%;
+		background: #FFFFFF no-repeat 20px center;
+		border: 0px solid #D9E8FA;
+		box-sizing: border-box;
+		border-radius: 5px;
+		color: #000;
+		font-family: $font_family_os;
+		font-size: 16px;
+		line-height: 30px;
+		font-weight: 300;
+		vertical-align: top;
+		position: relative;
+		z-index: 2;
+		
+		&::-webkit-input-placeholder {opacity: 1; color: #797979;}
+		&::-moz-placeholder          {opacity: 1; color: #797979;}/* Firefox 19+ */
+		&:-moz-placeholder           {opacity: 1; color: #797979;}/* Firefox 18- */
+		&:-ms-input-placeholder      {opacity: 1; color: #797979;}
+    }
+	input {
+		&.name {
+			background-image: url(images/icon_name.png);
+		}
+		&.phone {
+			background-image: url(images/icon_phone.png);
+		}
+		&.email {
+			background-image: url(images/icon_email.png);
+		}
+	}
+	textarea.message {
+		background-image: url(images/icon_message.png);
+		background-position: 20px 20px;
+	}
+    textarea {
+		height: 100px;
+		width: 100%;
+		line-height: 22px;
+		padding-top: 20px;
+		resize: none;
+    }
+    
+    .input_file {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		margin-right: 20px;
+		margin-left: 10px;
+		margin-bottom: 30px;
+    }
+    
+    input[type="file"] {
+		position: absolute;
+		z-index: 0;
+		opacity: 0;
+	}
+	
+	input[type="file"] +label {
+		position: relative;
+		z-index: 2;
+		font-weight: 400;
+		
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			vertical-align: -1px;
+			margin-right: 10px;
+			background: url(images/icon_plus.png) no-repeat center;
+		}
+    }
+    
+    .check {
+		position: relative;
+		// font-weight: 300;
+		// font-size: 14px;
+		// line-height: 20px;
+		// display: inline-block;
+		// vertical-align: top;
+		// width: 46%;  
+		// padding-left: 34px;
+		// margin-right: 20px;
+		// opacity: 0.8;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+		width: auto;
+		height: auto;
+		margin-bottom: 0;
+		opacity: 0;
+		margin-left: -2px;
+		position: absolute;
+		margin-right: 0;
+    }
+
+    input[type="checkbox"]:not(checked) + label {
+		//position: relative;
+		cursor: pointer;
+		margin: 20px 10px 10px;
+		display: inline-block;
+		text-align: left;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.03em;
+		@include transition(all);
+		
+		&:before {
+			content: '';
+			width: 12px;
+			height: 12px;
+			background: #fff;
+			border: 2px solid $color_a;
+			box-sizing: border-box;
+			border-radius: 2px;
+			position: absolute;
+			left: 0px;
+			top: 2px;
+		}
+		
+		&:after {
+			content: '';
+			width: 14px;
+			height: 10px;
+			background: url(images/icon_check.png) no-repeat center ;
+			position: absolute;
+			left: 1px;
+   			top: 3px;
+			@include transition(all);
+			opacity: 0;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+    }
+    input[type="checkbox"]:checked + label {
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	.small {
+		font-size: 14px;
+		line-height: 16px;
+		margin-bottom: 30px;
+	}
+	
+	a {
+		color: $color_text;
+		text-decoration: underline;
+
+		sup {
+			text-decoration: none;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+    
+    .feedback-form-bot {
+		padding-top: 5px;
+		position: relative;
+		margin-top: 18px;
+		float: left;
+		text-align: left;
+		font-size: 14px;
+		line-height: 19px;
+    }
+
+
+    .uformTools {
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 0px;
+		padding-bottom: 0px;
+		margin-right: 0px;
+		margin-bottom: 30px;
+		.uFormButton {
+			float: none;
+			padding: 0;
+			width: auto;
+		}
+	}
+    
+    button[type="submit"], button[type="reset"], .gUniForm .uFormSubmit, .gUniFormSuccessButton {
+	    margin-right: 0;
+	    //margin-bottom: 20px;
+	    padding: 0 30px 0 30px;
+	    //width: calc(33.3% - 13px);//280px;
+	    height: 50px;
+	    line-height: 48px;
+	    font-family: $font_family_os;
+	    font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+	    background: $color_a;
+	    color: #fff;
+	    cursor: pointer;
+	    box-sizing: border-box;
+	    @include transition(all);
+	    border: 1px solid $color_a;
+	    border-radius: 30px;
+	    text-align: center;
+	    position: relative;
+	    vertical-align: middle;
+		text-decoration: none;
+		float: right;
+	    
+	    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	    -webkit-tap-highlight-color: transparent; 
+	
+		&:hover {
+			background: #fff;
+			color: $color_a;
+		}
+    }
+}
+
+.right_col {
+	padding-bottom: 90px;
+	.form_block {
+		position: sticky;
+		top: 185px;
+		background: #FFFFFF;
+		box-shadow: 5px 5px 30px rgba(18, 67, 58, 0.1);
+		border-radius: 10px;
+		padding: 60px 40px 40px;
+		text-align: center;
+
+		h2 {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 10px;
+		}
+
+		.input_text {
+			width: 100%;
+			float: left;
+			margin: 0 0px 20px;
+			position: relative;
+		}
+
+		form {
+			max-width: 230px;
+			margin: 0 auto;
+			padding-top: 6px;
+		}
+
+		input {
+			border: 1px solid #D3D3D3;
+		}
+
+		input[type=checkbox]:not(checked) + label {
+			margin: 0px 0px 10px;
+		}
+		.small {
+			text-align: left;
+		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+    #main_form {
+		overflow: hidden;
+		&::after {
+			bottom: -3px;
+		}
+	}
+}
+
+// @media screen and (max-width: 1400px) {
+    
+// }
+@media screen and (max-width: 1300px) {
+    #main_form {
+		padding-top: 70px;
+		padding-bottom: 80px;
+		.page_width {
+			padding: 57px 100px 60px;
+		}
+	}
+
+	.right_col {
+		.form_block {
+			top: 185px;
+			padding: 30px 20px 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+    .right_col {
+		.form_block {
+			top: 175px;
+		}
+	}
+}
+
+@media screen and (max-width: 1030px) {
+	#main_form {
+		padding-top: 50px;
+		padding-bottom: 60px;
+		.page_width {
+			padding: 40px 60px 40px;
+		}
+	}
+}
+
+// @media screen and (max-width: 900px) {
+	
+// }
+@media screen and (max-width: 800px) {
+	.form_block {
+		input[type=text] {
+			height: 45px;
+			font-size: 14px;
+			line-height: 25px;
+		}
+		textarea {
+			height: 100px;
+		}
+		input[type=checkbox]:not(checked) + label {
+			padding-left: 20px;
+			letter-spacing: 0;
+		}
+		button[type=submit], 
+		button[type=reset], 
+		.gUniForm .uFormSubmit, 
+		.gUniFormSuccessButton {
+			height: 37px;
+			line-height: 36px;
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#main_form {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		.page_width {
+			padding: 25px 20px 20px;
+		}
+	}
+	.form_block {
+		.input_text {
+			width: calc(100% - 20px);
+			float: none;
+		}
+		.textarea {
+			margin-left: 10px;
+		}
+		textarea {
+			height: 150px;
+		}
+	}
+}
+
+
+/* end forms styles */

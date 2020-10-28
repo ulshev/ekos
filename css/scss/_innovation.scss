@@ -1,0 +1,469 @@
+/* start innovation styles */ 
+
+#innovation {
+    background: #2e8d8f url(images/bg_innovation.jpg) no-repeat 80% bottom / cover;
+    .page_width {
+        padding-bottom: 42px;
+        padding-top: 100px;
+        color: #fff;
+    }
+
+    h2 {
+        margin-bottom: 28px;
+    }
+
+    .innovation_slider {
+        width: 80%; 
+        max-width: 690px;
+        float: left;
+        margin-right: -50%;
+    }
+
+    .microbes_block {
+        margin-left: 51%;
+        margin-top: -34px;
+    }
+}
+
+.innovation_slider {
+    margin: 0;
+    padding: 0;
+    height: 397px;
+    // .slick-list {
+    //     margin-right: 130px;
+    // }
+
+    .slick-arrow {
+        top: auto;
+        bottom: 0;
+        margin-top: 0;
+        border-color: #fff;
+
+        &::before {
+            border-color: #fff;
+        }
+
+        &:hover {
+            background-color: #fff;
+            &::before {
+                border-color: #2e8d8f;
+            }
+        }
+    }
+
+    .slick-prev {
+        left: auto;
+        right: -40px;
+    }
+    .slick-next {
+        right: -120px;
+    }
+
+    .item {
+        padding-left: 10px;
+        padding-top: 10px;
+
+        h3 {
+            font-size: 18px;
+            line-height: 120%;
+        }
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            min-height: 150px;
+            margin-bottom: 2px;
+        }
+    }
+}
+
+@keyframes microbe1_moove {
+    0% {
+        transform: translate(-150%,-150%);
+    }
+    50% {
+        transform: translate(0%,0%);
+    }
+    100% {
+        transform: translate(150%,150%);
+    }
+}
+@-webkit-keyframes microbe1_moove {
+    0% {
+        transform: translate(-150%,-150%);
+    }
+    50% {
+        transform: translate(0%,0%);
+    }
+    100% {
+        transform: translate(150%,150%);
+    }
+}
+
+@keyframes microbe2_moove {
+    0% {
+        transform: translate(190%,190%);
+    }
+    50% {
+        transform: translate(0%,0%);
+    }
+    100% {
+        transform: translate(-150%,-150%);
+    }
+}
+@-webkit-keyframes microbe2_moove {
+    0% {
+        transform: translate(190%,190%);
+    }
+    50% {
+        transform: translate(0%,0%);
+    }
+    100% {
+        transform: translate(-150%,-150%);
+    }
+}
+
+@keyframes microbe3_moove {
+    0% {
+        transform: translate(-100%,100%);
+    }
+    50% {
+        transform: translate(200%,-200%);
+    }
+    100% {
+        transform: translate(-100%,100%);
+    }
+}
+@-webkit-keyframes microbe3_moove {
+    0% {
+        transform: translate(-100%,100%);
+    }
+    50% {
+        transform: translate(200%,-200%);
+    }
+    100% {
+        transform: translate(-100%,100%);
+    }
+}
+
+@keyframes microbe4_moove {
+    0% {
+        transform: translate(100%,50%);
+    }
+    50% {
+        transform: translate(-100%,-50%);
+    }
+    100% {
+        transform: translate(100%,50%);
+    }
+}
+
+@-webkit-keyframes microbe4_moove {
+    0% {
+        transform: translate(100%,50%);
+    }
+    50% {
+        transform: translate(-100%,-50%);
+    }
+    100% {
+        transform: translate(100%,50%);
+    }
+}
+@keyframes microbe5_moove {
+    0% {
+        transform: translate(100%,-100%);
+    }
+    50% {
+        transform: translate(-200%,200%);
+    }
+    100% {
+        transform: translate(100%,-100%);
+    }
+}
+
+@-webkit-keyframes microbe5_moove {
+    0% {
+        transform: translate(100%,-100%);
+    }
+    50% {
+        transform: translate(-200%,200%);
+    }
+    100% {
+        transform: translate(100%,-100%);
+    }
+}
+
+.microbes_block {
+    width: 490px;
+    height: 310px;
+    //background: url(images/microbes_block.png) no-repeat center / cover;
+    border-radius: 10px;
+    position: relative;
+
+    .loupe_big {
+        width: 295/490*100%;
+        height: 326px;
+        top: 44.7%;
+        left: 57%;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background: url(images/loupe_big.png) no-repeat left top / 100% auto;
+        }
+    }
+
+    .microbes_moove {
+        width: 170/295*100%;
+        top: 1%;
+        left: 1%;
+        position: relative;
+        background: linear-gradient(317.52deg, #279C98 12.4%, #0FE4C3 85.9%);
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            opacity: 0;
+        }
+
+        > div {
+            position: absolute;
+            @include transition_slow(all);
+            transition-duration: 20s;
+        } 
+
+        .microbe1 {
+            background: url(images/microbe1.png) no-repeat left top / 100% auto;
+            background-blend-mode: luminosity;
+            width: 54/170*100%;
+            height: 68px;
+            z-index: 1;
+        }
+        .microbe1 {
+            top: 33%;
+            left: 42%;
+            animation: 30s linear 0s normal none infinite running microbe1_moove;
+            -webkit-animation: 30s linear 0s normal none infinite running microbe1_moove;
+        }
+        .microbe2, .microbe7 {
+            background: url(images/microbe2.png) no-repeat left top / 100% auto;
+            background-blend-mode: luminosity;
+            width: 40/170*100%;
+            height: 58px;
+            z-index: 1;
+        }
+        .microbe2 {
+            top: 31%;
+            left: 12%;
+            animation: 30s linear 0s normal none infinite running microbe2_moove;
+            -webkit-animation: 30s linear 0s normal none infinite running microbe2_moove;
+        }
+        .microbe3, .microbe8, .microbe13 {
+            background: url(images/microbe3.png) no-repeat left top / 100% auto;
+            background-blend-mode: luminosity;
+            width: 53/170*100%;
+            height: 52px;
+        }
+        .microbe3 {
+            top: 63.5%;
+            left: 25.5%;
+            animation: 30s linear 0s normal none infinite running microbe3_moove;
+            -webkit-animation: 50s linear 0s normal none infinite running microbe3_moove;
+        }
+        .microbe4, .microbe9, .microbe14 {
+            background: url(images/microbe4.png) no-repeat left top / 100% auto;
+            background-blend-mode: luminosity;
+            width: 35/170*100%;
+            height: 33px;
+        }
+        .microbe4 {
+            top: 31.5%;
+            left: 14.5%;
+            animation: 30s linear 0s normal none infinite microbe4_moove;
+            -webkit-animation: 30s linear 0s normal none infinite microbe4_moove;
+        }
+        .microbe9 {
+            top: 81.5%;
+            left: 14.5%;
+            animation: 50s linear 0s normal none infinite microbe5_moove;
+            -webkit-animation: 50s linear 0s normal none infinite microbe5_moove;
+        }
+        .microbe14 {
+            top: 61.5%;
+            left: 94.5%;
+            animation: 70s linear 0s normal none infinite microbe3_moove;
+            -webkit-animation: 70s linear 0s normal none infinite microbe3_moove;
+        }
+        .microbe5, .microbe10, .microbe15 {
+            background: url(images/microbe5.png) no-repeat left top / 100% auto;
+            background-blend-mode: luminosity;
+            width: 25/170*100%;
+            height: 24px;
+        }
+        .microbe5 {
+            top: 13.5%;
+            left: 33.5%;
+            animation: 30s linear 0s normal none infinite microbe5_moove;
+            -webkit-animation: 30s linear 0s normal none infinite microbe5_moove;
+        }
+        .microbe10 {
+            top: 73.5%;
+            left: 53.5%;
+            animation: 70s linear 0s normal none infinite microbe4_moove;
+            -webkit-animation: 40s linear 0s normal none infinite microbe4_moove;
+        }
+        .microbe15 {
+            top: 53.5%;
+            left: 73.5%;
+            animation: 50s linear 0s normal none infinite microbe3_moove;
+            -webkit-animation: 50s linear 0s normal none infinite microbe3_moove;
+        }
+
+        // &:hover {
+        //     .microbe1 {
+        //         transform: translate(100%,100%);
+        //     }
+        //     .microbe2 {
+        //         transform: translate(-100%,-100%);
+        //     }
+        //     .microbe3 {
+        //         transform: translate(120%,-120%);
+        //     }
+        //     .microbe4 {
+        //         transform: translate(-100%,-50%);
+        //     }
+        //     .microbe5 {
+        //         transform: translate(-200%,200%);
+        //     }
+        // }
+    }
+}
+
+// @media screen and (min-width: 1301px) {
+    
+// }
+// @media screen and (max-width: 1600px) {
+    
+// }
+@media screen and (max-width: 1300px) {
+    #innovation {
+        .page_width {
+            padding-top: 70px;
+        }
+    }
+    .innovation_slider {
+        height: 350px;
+
+        .slick-prev {
+            right: 80px;
+        }
+        .slick-next {
+            right: 0px;
+        }
+    }
+}
+
+// @media screen and (max-width: 1200px) {
+    
+// }
+
+@media screen and (max-width: 1030px) {
+    #innovation {
+        .page_width {
+            padding-top: 50px;
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
+    .innovation_slider {
+        height: 300px;
+        .item {
+            h3 {
+                font-size: 16px;
+                line-height: 140%;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                min-height: 120px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .microbes_block {
+        display: none;
+    }
+}
+
+// @media screen and (max-width: 800px) {
+    
+// }
+@media screen and (max-width: 700px) {
+    #innovation {
+        text-align: left;
+        .page_width {
+            padding-top: 40px;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    #innovation {
+        .page_width {
+            padding-top: 30px;
+        }
+        .innovation_slider {
+            width: auto;
+            float: none;
+            margin-right: 0%;
+        }
+    }
+    .innovation_slider {
+        height: auto;
+        padding-bottom: 60px;
+
+        .slick-arrow {
+            left: 50%
+        }
+
+        .slick-prev {
+            margin-left: -50px;
+        }
+        .slick-next {
+            margin-left: 10px;
+        }
+        .item {
+            h3 {
+                font-size: 14px;
+                line-height: 140%;
+            }
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                min-height: auto;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+// @media screen and (max-width: 520px) {
+    
+// }
+// @media screen and (max-width: 450px) {
+    
+// }
+
+/* end innovation styles */

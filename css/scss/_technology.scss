@@ -1,0 +1,273 @@
+/* start technology styles */ 
+
+#technology {
+    background: url(images/bg_technology.jpg) no-repeat center / cover;
+    .page_width {
+        padding-bottom: 80px;
+        padding-top: 100px;
+        color: #fff;
+        text-align: left;
+    }
+
+    .h1 {
+        margin-bottom: 16px;
+    }
+
+    p {
+        padding-right: 40px;
+    }
+
+}
+
+.production_technology_slider {
+    position: relative;
+    padding-top: 50px;
+    min-height: 445px;
+
+    .number_slider {
+        width: 490px;
+        padding: 0;
+        margin: -80px 0 -80px 130/1530*100%;
+        float: left;
+        height: 490px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -30%;
+            top: -22%;
+            width: 160%;
+            height: 160%;
+            background: url(images/bg_number_slider.png) no-repeat center / 100% auto;
+        }
+
+        .slick-list {
+            margin: 0 0px;
+        }
+
+        .slick-track {
+            transform: none !important;
+        }
+
+        div {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 180px;
+            font-weight: 800;
+            line-height: 200px;
+            color: transparent;
+            opacity: 0;
+            @include transition(all);
+
+            &.slick-current {
+                opacity: 1;
+                color: $color_a;
+            }
+            // &.slick-current ~ .item {
+            //     &::before { 
+            //         display: none;
+            //     }
+            // }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                margin-left: -37px;
+                width: 263px;
+                height: 222px;
+                background: url(images/round_bg.png) no-repeat left bottom / 100% auto;
+            }
+
+            // &:nth-child(2) {
+            //     &::before {
+            //         top: 226px;
+            //         margin-left: 26px;
+            //         transform: rotate(69deg);
+            //     }
+            // }
+        }
+    }
+    
+    .info_slider {
+        margin-left: calc(50% + 25px);
+        padding: 45px 0;
+
+        .slick-arrow {
+            margin-top: 0;
+            top: auto;
+            bottom: 16px;
+            height: 30px;
+            width: 30px;
+        }
+
+        .slick-prev {
+            left: -10px;
+        }
+        .slick-arrow:before {
+            width: 9px;
+            height: 9px;
+            top: 9px;
+        }
+        .slick-prev::before {
+            left: 10px;
+        }
+        .slick-next {
+            left: 60px;
+            right: auto;
+        }
+        .slick-next:before {
+            right: 10px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 0;
+            padding-right: 0;
+        }
+        li {margin-bottom: 6px;}
+    }
+}
+
+
+// @media screen and (min-width: 1301px) {
+    
+// }
+
+// @media screen and (max-width: 1600px) {
+    
+// }
+
+// @media screen and (max-width: 1400px) {
+   
+// }
+@media screen and (max-width: 1300px) {
+    #technology {
+        .page_width {
+            padding-bottom: 50px;
+            padding-top: 70px;
+        }
+    }
+}
+@media screen and (max-width: 1030px) {
+    #technology {
+        .page_width {
+            padding-bottom: 30px;
+            padding-top: 50px;
+        }
+        p {
+            padding-right: 0px;
+        }
+    }
+    .production_technology_slider {
+        min-height: auto;
+        padding-top: 0px;
+        .number_slider {
+            width: 350px;
+            margin: 0px 0 -50px 0;
+            height: 350px;
+            .item {
+                font-size: 150px;
+                line-height: 170px;
+            }
+        }
+        .info_slider {
+            margin-left: calc(40% + 25px);
+        }
+    }
+}
+
+// @media screen and (max-width: 900px) {
+    
+// }
+
+@media screen and (max-width: 800px) {
+    #technology {
+        .page_width {
+            padding-bottom: 10px;
+            padding-top: 40px;
+        }
+    }
+    .production_technology_slider {
+        .number_slider {
+            width: 250px;
+            margin: 0px 0 -50px -50px;
+            height: 250px;
+            .item {
+                font-size: 100px;
+                line-height: 120px;
+            }
+        }
+        .info_slider {
+            margin-left: calc(30% - 25px);
+        }
+    }
+}
+// @media screen and (max-width: 700px) {
+    
+// }
+
+@media screen and (max-width: 600px) {
+    #technology {
+        .page_width {
+            padding-bottom: 10px;
+            padding-top: 30px;
+        }
+        .h1 {
+            text-align: center;
+        }
+    }
+    .production_technology_slider {
+        .number_slider {
+            width: 150px;
+            margin: 0px 0 -50px -30px;
+            height: 150px;
+            .item {
+                font-size: 70px;
+                line-height: 90px;
+            }
+        }
+        .info_slider {
+            margin-left: calc(20% - 5px);
+            padding-top: 0;
+        }
+    }
+}
+
+// @media screen and (max-width: 500px) {
+    
+// }
+
+@media screen and (max-width: 450px) {
+    .production_technology_slider {
+        .number_slider {
+            width: 150px;
+            margin: 0px auto -20px auto;
+            height: 150px;
+            float: none;
+        }
+        .info_slider {
+            margin-left: 10px;
+            padding-top: 0;
+
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* end technology styles */
